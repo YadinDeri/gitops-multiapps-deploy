@@ -1,7 +1,26 @@
-apiVersion: v2
-name: nginx
-version: 0.1.0
-description: A Helm chart for Kubernetes NGINX deployment
-type: application
-version: 0.1.0
-appVersion: "1.25.0"
+# apiVersion: v2
+# name: nginx
+# version: 0.1.0
+# description: A Helm chart for Kubernetes NGINX deployment
+# type: application
+# version: 0.1.0
+# appVersion: "1.25.0"
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/YadinDeri/gitops-test.git 
+    targetRevision: main
+    path: nginxapp 
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nginxapp
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

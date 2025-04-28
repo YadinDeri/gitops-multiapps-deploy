@@ -1,8 +1,8 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: nginx-config
-  namespace: dev
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: nginx-config
+#   namespace: dev
 replicaCount: 2
 image:
   repository: nginx

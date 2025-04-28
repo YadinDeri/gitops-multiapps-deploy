@@ -20,7 +20,8 @@ spec:
         path: 'base/{{app}}'
         helm:
           valueFiles:
-            - '/apps/dev/{{app}}-values.yaml'
+            # - '/apps/dev/{{app}}-values.yaml'
+            - '/apps/dev/nginx-values.yaml'
       destination:
         server: 'https://kubernetes.default.svc'
         namespace: dev

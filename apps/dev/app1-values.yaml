@@ -2,7 +2,7 @@ name: app1
 replicaCount: 2
 image:
   # repository: myregistry/app1
-  repository: base/nginx
+  repository: nginx
   tag: latest
   pullPolicy: IfNotPresent
 service:
@@ -20,8 +20,8 @@ resources:
 ingress:
   enabled: false
   path: /
-  hosts:
-    - host: chart-example.local
-      paths:
-        - /
+  # hosts:
+  #   - host: chart-example.local
+  #     paths:
+  #       - /
   tls: []

@@ -17,7 +17,8 @@ spec:
       source:
         repoURL: 'https://github.com/YadinDeri/gitops-multiapps-deploy.git'
         targetRevision: HEAD
-        path: 'base/{{app}}'
+        # path: 'base/{{app}}'
+        path: 'base/nginx'
         helm:
           valueFiles:
             # - '/apps/dev/{{app}}-values.yaml'

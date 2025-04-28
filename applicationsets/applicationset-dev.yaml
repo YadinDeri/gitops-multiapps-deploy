@@ -17,11 +17,11 @@ spec:
       source:
         repoURL: 'https://github.com/YadinDeri/gitops-multiapps-deploy.git'
         targetRevision: HEAD
-        path: 'base/{{app}}'
-        # path: 'base/nginx'
-        # helm:
-        valueFiles:
-          - '../../apps/dev/{{app}}-values.yaml'
+        # path: 'base/{{app}}'
+        path: 'apps/dev/nginx-values.yaml'
+        helm:
+          valueFiles:
+            - '../../apps/dev/{{app}}-values.yaml'
             # - '../../apps/dev/nginx-values.yaml'
       destination:
         server: 'https://kubernetes.default.svc'

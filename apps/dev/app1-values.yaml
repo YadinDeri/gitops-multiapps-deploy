@@ -2,7 +2,7 @@ name: app1
 replicaCount: 2
 image:
   # repository: myregistry/app1
-  repository: nginx
+  repository: base/nginx
   tag: latest
   pullPolicy: IfNotPresent
 service:

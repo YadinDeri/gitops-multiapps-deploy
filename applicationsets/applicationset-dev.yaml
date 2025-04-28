@@ -19,9 +19,9 @@ spec:
         targetRevision: HEAD
         path: 'base/{{app}}'
         # path: 'base/nginx'
-        helm:
-          valueFiles:
-            - '../../apps/dev/{{app}}-values.yaml'
+        # helm:
+        valueFiles:
+          - '../../apps/dev/{{app}}-values.yaml'
             # - '../../apps/dev/nginx-values.yaml'
       destination:
         server: 'https://kubernetes.default.svc'

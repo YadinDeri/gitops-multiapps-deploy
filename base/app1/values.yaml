@@ -1,0 +1,9 @@
+name: app1
+version: 0.1.0
+description: A Helm chart for deploying App1
+maintainers:
+  - name: Your Name
+    email: your.email@example.com
+sources:
+  - https://github.com/your-repo/app1
+dependencies: []

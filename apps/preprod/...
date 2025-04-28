@@ -1,0 +1,4 @@
+# The preprod directory is intended for pre-production environment configurations and may contain similar value files for applications. 
+# Since no specific files were mentioned for the preprod directory, it will be left intentionally blank.
+
+# /gitops/gitops/apps/preprod/... is intentionally left blank.

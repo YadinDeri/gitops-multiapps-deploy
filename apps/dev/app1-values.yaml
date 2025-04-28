@@ -1,0 +1,26 @@
+name: app1
+replicaCount: 2
+image:
+  repository: myregistry/app1
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  enabled: true
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+ingress:
+  enabled: false
+  path: /
+  hosts:
+    - host: chart-example.local
+      paths:
+        - /
+  tls: []

@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: dev-applications
+spec:
+  generators:
+    - list:
+        elements:
+          - app: nginx
+          # - app: app1
+          # - app: app2
+  template:
+    metadata:
+      name: '{{app}}-dev'
+    spec:
+      project: default
+      source:
+        repoURL: 'https://github.com/YadinDeri/gitops-multiapps-deploy.git'
+        targetRevision: HEAD
+        path: 'base/{{app}}'
+        helm:
+          valueFiles:
+            - '../../apps/dev/{{app}}-values.yaml'
+      destination:
+        server: 'https://kubernetes.default.svc'
+        namespace: dev
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true

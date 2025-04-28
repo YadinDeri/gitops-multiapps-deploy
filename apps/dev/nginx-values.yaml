@@ -3,14 +3,14 @@
 # metadata:
 #   name: nginx-config
 #   namespace: dev
-# replicaCount: 2
-# image:
-#   repository: nginx
-#   tag: latest
-#   pullPolicy: IfNotPresent
-# service:
-#   type: ClusterIP
-#   port: 80
+replicaCount: 2
+image:
+  repository: nginx
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
 # resources:
 #   requests:
 #     memory: "64Mi"
@@ -18,22 +18,3 @@
 #   limits:
 #     memory: "128Mi"
 #     cpu: "500m"
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: nginx-app
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/YadinDeri/gitops-test.git 
-    targetRevision: main
-    path: nginxapp 
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: nginxapp
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true

@@ -39,7 +39,7 @@ controller:
     repository: "jenkins/jenkins"
 
     # -- Controller image tag override; i.e., tag: "2.440.1-jdk21"
-    tag: 
+    tag:
 
     # -- Controller image tag label
     tagLabel: jdk21
@@ -403,6 +403,7 @@ controller:
   # Plugins will be installed during Jenkins controller start
   # -- List of Jenkins plugins to install. If you don't want to install plugins, set it to `false`
   controller:
+    image: arm64v8/jenkins
     installPlugins:
       - kubernetes:latest
       - workflow-aggregator:latest
@@ -961,8 +962,7 @@ agent:
     # -- Repository to pull the agent jnlp image from
     repository: "jenkins/inbound-agent"
     # -- Tag of the image to pull
-    # tag: "3307.v632ed11b_3a_c7-2"
-    tag: "lts-jdk17"
+    tag: "3307.v632ed11b_3a_c7-2"
   # -- Configure working directory for default agent
   workingDir: "/home/jenkins/agent"
   nodeUsageMode: "NORMAL"

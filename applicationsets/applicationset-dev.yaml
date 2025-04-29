@@ -7,9 +7,9 @@ spec:
   generators:
     - list:
         elements:
-          - app: nginx
+          # - app: nginx
           - app: jenkins
-          - app: nginxx
+          # - app: nginxx
   template:
     metadata:
       name: '{{app}}-dev'

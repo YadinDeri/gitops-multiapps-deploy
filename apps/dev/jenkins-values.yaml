@@ -36,8 +36,7 @@ controller:
     # -- Controller image registry
     registry: "docker.io"
     # -- Controller image repository
-    # repository: "jenkins/jenkins"
-    repository: "arm64v8/jenkins"
+    repository: "jenkins/jenkins"
 
     # -- Controller image tag override; i.e., tag: "2.440.1-jdk21"
     tag: 

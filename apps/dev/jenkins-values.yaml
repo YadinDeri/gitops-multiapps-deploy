@@ -39,7 +39,7 @@ controller:
     repository: "jenkins/jenkins"
 
     # -- Controller image tag override; i.e., tag: "2.440.1-jdk21"
-    tag:
+    tag: "lts-jdk17"
 
     # -- Controller image tag label
     tagLabel: jdk21
@@ -961,7 +961,8 @@ agent:
     # -- Repository to pull the agent jnlp image from
     repository: "jenkins/inbound-agent"
     # -- Tag of the image to pull
-    tag: "3307.v632ed11b_3a_c7-2"
+    # tag: "3307.v632ed11b_3a_c7-2"
+    tag: "lts-jdk17"
   # -- Configure working directory for default agent
   workingDir: "/home/jenkins/agent"
   nodeUsageMode: "NORMAL"

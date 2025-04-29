@@ -32,20 +32,22 @@ renderHelmLabels: true
 controller:
   # -- Used for label app.kubernetes.io/component
   componentName: "jenkins-controller"
-  image:
-    # -- Controller image registry
-    registry: "docker.io"
-    # -- Controller image repository
-    repository: "jenkins/jenkins"
+  image: jenkins/jenkins
+  tag: lts-jdk17
+  # image:
+  #   # -- Controller image registry
+  #   registry: "docker.io"
+  #   # -- Controller image repository
+  #   repository: "jenkins/jenkins"
 
-    # -- Controller image tag override; i.e., tag: "2.440.1-jdk21"
-    tag: "lts-jdk17"
+  #   # -- Controller image tag override; i.e., tag: "2.440.1-jdk21"
+  #   tag: 
 
-    # -- Controller image tag label
-    tagLabel: jdk21
-    # -- Controller image pull policy
-    pullPolicy: "Always"
-  # -- Controller image pull secret
+  #   # -- Controller image tag label
+  #   tagLabel: jdk21
+  #   # -- Controller image pull policy
+  #   pullPolicy: "Always"
+  # # -- Controller image pull secret
   imagePullSecretName:
   # -- Lifecycle specification for controller-container
   lifecycle: {}

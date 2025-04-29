@@ -10,7 +10,7 @@ image:
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
-  port: 80
+  port: 82
 resources:
   requests:
     memory: "32Mi"

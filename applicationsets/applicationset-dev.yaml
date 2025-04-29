@@ -8,8 +8,8 @@ spec:
     - list:
         elements:
           - app: nginx
-          # - app: app1
-          # - app: app2
+          - app: jenkins
+          - app: nginxx
   template:
     metadata:
       name: '{{app}}-dev'

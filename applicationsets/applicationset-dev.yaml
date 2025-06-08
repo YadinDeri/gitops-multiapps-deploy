@@ -8,7 +8,7 @@ spec:
     - list:
         elements:
           # - app: nginx
-          - app: jenkins
+          # - app: jenkins
           # - app: nginxx
   template:
     metadata:

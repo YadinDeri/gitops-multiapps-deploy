@@ -405,9 +405,9 @@ controller:
   controller:
     installPlugins:
       - kubernetes:latest
-      - workflow-aggregator:latest
-      - git:latest
-      - configuration-as-code:latest
+      # - workflow-aggregator:latest
+      # - git:latest
+      # - configuration-as-code:latest
   # installPlugins:
   #   - kubernetes:4324.vfec199a_33512
   #   - workflow-aggregator:608.v67378e9d3db_1
